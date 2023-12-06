@@ -56,7 +56,7 @@ pollutants = ['NO2', 'O3', 'CO']
 #text_to_display = "NO2 plot for Praha" 
 
 Stations=['Brno - Detska nemocnice', 'Brno-Arboretum',
-       'Brno-Lisen', 'Brno-Uvoz', 'Brno-Turany']
+          'Brno-Uvoz', 'Brno-Turany']
 
 # Now, you have separate DataFrames for each pollutant, with all other columns retained
 
