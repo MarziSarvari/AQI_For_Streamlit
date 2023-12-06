@@ -51,56 +51,16 @@ st.title("Czech Air Quality Prediction App")
 
 
 
-pollutants = ['NO2', 'PM10', 'O3', 'PM2.5', 'SO2', 'CO']
+pollutants = ['NO2', 'O3', 'CO']
 # Create separate DataFrames for each pollutant
 #text_to_display = "NO2 plot for Praha" 
 
-Stations=['Praha 6-Brevnov', 'Praha 8-Karlin', 'Praha 8-Kobylisy',
-       'Praha 2-Legerova', 'Praha 4-Libus', 'Praha 10-Prumyslova',
-       'Praha 1-n. Republiky', 'Praha 2-Riegrovy sady',
-       'Praha 5-Stodulky', 'Praha 6-Suchdol', 'Praha 10-Vrsovice',
-       'Praha 9-Vysocany', 'Brno - Detska nemocnice', 'Brno-Arboretum',
-       'Brno-Lisen', 'Brno-Uvoz', 'Brno-Turany', 'Kucharovice',
-       'Mikulov-Sedlec', 'Znojmo', 'Ceske Budejovice', 'Churanov',
-       'Hojna Voda', 'Kocelovice', 'Prachatice', 'Tabor',
-       'Moravska Trebova - Piaristicka.', 'Pardubice-Rosice',
-       'Pardubice Dukla', 'Svratouch', 'Hradec Kralove-Brnen',
-       'Hradec Kralove-observator', 'Krkonose-Rychory', 'Polom',
-       'Trutnov - Tkalcovska', 'Kostelni Myslova', 'Kosetice', 'Trebic',
-       'Cheb', 'Prebuz', 'Sokolov', 'Ceska Lipa', 'Frydlant',
-       'Horni Vitkov', 'Liberec-Rochlice', 'Sous', 'Uhelna',
-       'Jesenik-lazne', 'Olomouc-Hejcin', 'Prerov', 'Prostejov',
-       'Kamenny Ujezd', 'Plzen-Slovany', 'Plzen-stred', 'Plzen-Lochotin',
-       'Plzen-Doubravka', 'Primda', 'Beroun', 'Kladno-stred mesta',
-       'Kladno-Svermov', 'Mlada Boleslav', 'Ondrejov',
-       'Rozdalovice-Ruska', 'Bily Kriz', 'Cervena hora', 'Cesky Tesin',
-       'Frydek-Mistek', 'Havirov', 'Ostrava-Ceskobratrsk',
-       'Ostrava-Fifejdy', 'Ostrava-Poruba CHMU', 'Ostrava-Privoz',
-       'Opava-Katerinky', 'Ostrava-Zabreh', 'Studenka', 'Trinec-Kanada',
-       'Trinec-Kosmos', 'Vernovice', 'Chomutov', 'Decin', 'Doksany',
-       'Krupka', 'Lom', 'Litomerice', 'Medenec', 'Most',
-       'Rudolice v Horach', 'Sneznik', 'Teplice', 'Tusimice',
-       'Usti n.L.-Vseboricka', 'Usti n.L.-Kockov', 'Usti n.L.-mesto',
-       'Stitna n.Vlari', 'Tesnovice', 'Uherske Hradiste',
-       'Valasske Mezirici', 'Zlin']
+Stations=['Brno - Detska nemocnice', 'Brno-Arboretum',
+       'Brno-Lisen', 'Brno-Uvoz', 'Brno-Turany']
 
 # Now, you have separate DataFrames for each pollutant, with all other columns retained
 
-Cities = ['Praha', 'Brno', 'Kucharovice', 'Mikulov',
-       'Znojmo', 'Ceske Budejovice', 'Churanov', 'Hojna Voda',
-       'Kocelovice', 'Prachatice', 'Tabor', 'Moravska Trebova ',
-       'Pardubice', 'Pardubice Dukla', 'Svratouch', 'Hradec Kralove',
-       'Krkonose', 'Polom', 'Trutnov ', 'Kostelni Myslova', 'Kosetice',
-       'Trebic', 'Cheb', 'Prebuz', 'Sokolov', 'Ceska Lipa', 'Frydlant',
-       'Horni Vitkov', 'Liberec', 'Sous', 'Uhelna', 'Jesenik', 'Olomouc',
-       'Prerov', 'Prostejov', 'Kamenny Ujezd', 'Plzen', 'Primda',
-       'Beroun', 'Kladno', 'Mlada Boleslav', 'Ondrejov', 'Rozdalovice',
-       'Bily Kriz', 'Cervena hora', 'Cesky Tesin', 'Frydek', 'Havirov',
-       'Ostrava', 'Opava', 'Studenka', 'Trinec', 'Vernovice', 'Chomutov',
-       'Decin', 'Doksany', 'Krupka', 'Lom', 'Litomerice', 'Medenec',
-       'Most', 'Rudolice v Horach', 'Sneznik', 'Teplice', 'Tusimice',
-       'Usti n.L.', 'Stitna n.Vlari', 'Tesnovice', 'Uherske Hradiste',
-       'Valasske Mezirici', 'Zlin']
+Cities = ['Brno']
 
 st.sidebar.header('Filters')
 # Add filters for city and pollutants in the sidebar
